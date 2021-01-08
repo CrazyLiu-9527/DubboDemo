@@ -8,8 +8,9 @@
     <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
     <dubbo:application name="demo-cousumer"/>
 
-    <!--注册中心 点对点-->
-    <dubbo:registry address="N/A"/>
+    <!--注册中心-->
+    <!--    <dubbo:registry address="N/A"/>-->
+    <dubbo:registry address="zookeeper://localhost:2181" check="false"></dubbo:registry>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference id="providerService" interface="per.lzy.dubbo.demo.provider.service.ProviderService"/>
