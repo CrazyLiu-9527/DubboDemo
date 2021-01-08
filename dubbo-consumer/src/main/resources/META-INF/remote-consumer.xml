@@ -12,6 +12,9 @@
     <dubbo:registry address="N/A"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <dubbo:reference id="providerService" interface="per.lzy.dubbo.demo.provider.service.ProviderService"/>
+    <dubbo:reference id="providerService"
+                     interface="per.lzy.dubbo.demo.provider.service.ProviderService"
+                     url="dubbo://10.6.233.124/per.lzy.dubbo.demo.provider.service.ProviderService"
+    />
 
 </beans>
